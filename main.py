@@ -1,5 +1,5 @@
 # Welcome! 
-print("Reseller Calculator v0.01 - Currently supporting StockX & GOAT (U.S ONLY) ")
+print("Reseller Calculator v0.02 - Currently supporting StockX & GOAT (U.S ONLY) ")
 user_decision = input("Would you like to access the INVENTORY or CALCULATOR mode? ").lower()
 
 master_inventory = []
