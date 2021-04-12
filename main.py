@@ -2,6 +2,12 @@
 print("Reseller Calculator v0.01 - Currently supporting StockX & GOAT (U.S ONLY) ")
 user_decision = input("Would you like to access the INVENTORY or CALCULATOR mode? ").lower()
 
+master_inventory = []
+
+# Inventory function
+def add_inventory(name, size, condition, price):
+  master_inventory.append(name,size,condition,price)
+
 if user_decision == "calculator":
 
   # Breaks into Selling Mode
@@ -56,4 +62,24 @@ if user_decision == "calculator":
   print("After fees, you will recieve $" + total_goat + ".")
 
 elif (user_decision == "inventory"):
-  print("Not done yet, teehee...")
+  inventory_mode_decision = input("Are you ADDING or SUBTRACTING from your inventory? ").lower()
+
+  if (inventory_mode_decision == "adding"):
+    
+    while True:
+      new_item = input("What are you adding? (name, size, condition, price). ")
+      if new_item == "EXIT":
+        break
+      else:
+        master_inventory.append(new_item)
+        print(master_inventory)
+        print("Type EXIT to close out of the program, or keep going. ")
+
+
+  elif (inventory_mode_decision == "subtracting"):
+    print("nay")
+
+
+  else:
+    print("Please follow directions, and try again.")
+
