@@ -40,6 +40,7 @@ if user_decision == "calculator":
         print("After fees, you will receive $" + rounded_four + ".")
     else: 
         print("Error, try again.")
+    
 
 
   # Breaks into Goat
@@ -52,10 +53,16 @@ if user_decision == "calculator":
     goat_ship = 5
 
   # Goat Calculations
-  total_goat = str(item_val_two - (item_val_two * goat_fee) - goat_ship)
-  print("After fees, you will recieve $" + total_goat + ".")
+    total_goat = str(item_val_two - (item_val_two * goat_fee) - goat_ship)
+    print("After fees, you will recieve $" + total_goat + ".")
+  
+  else:
+    print("Error, try again.")
 
+# Inventory Mode (Currently not working)
 elif (user_decision == "inventory"):
+  print("This mode is currently under maintenance.")
+  '''
   inventory_mode_decision = input("Are you ADDING or SUBTRACTING from your inventory? ").lower()
 
   if (inventory_mode_decision == "adding"):
@@ -66,4 +73,10 @@ elif (user_decision == "inventory"):
 
   else:
     print("Please follow directions, and try again.")
+  '''
 
+
+
+# Wrong input
+else:
+  print("Error, try again.")
